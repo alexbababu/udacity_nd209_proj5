@@ -1,0 +1,8 @@
+local_costmap:
+  ros__parameters:
+    < load_parameter_file: "$(find my_nav_config)/param/local_costmap_params.yaml" >
+    < load_parameter_file: "$(find my_nav_config)/param/costmap_common_params.yaml" >
+global_costmap:
+  ros__parameters:
+    < load_parameter_file: "$(find my_nav_config)/param/global_costmap_params.yaml" >
+    < load_parameter_file: "$(find my_nav_config)/param/costmap_common_params.yaml" >
