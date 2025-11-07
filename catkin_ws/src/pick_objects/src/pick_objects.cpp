@@ -111,7 +111,7 @@ int main(int argc, char** argv)
         // Check if the pickup goal was succesfully reached
         if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED)
         {
-            ROS_INFO("+++ Pickup Point reached. Starting 'item grab' process +++");
+            ROS_INFO("Reached pickup zone”");
             
             // Wait 5 seconds as required
             ROS_INFO("Waiting 5 secomds...");
@@ -129,7 +129,7 @@ int main(int argc, char** argv)
 
                 // Check the final result
                 if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED) {
-                    ROS_INFO("+++ Drop Off Point reached. Mission completed! +++");
+                    ROS_INFO("Reached drop-off zone”);
                 } else {
                      ROS_ERROR("Failed to reach the Drop Off Goal. Last state: %s", ac.getState().toString().c_str());
                 }
